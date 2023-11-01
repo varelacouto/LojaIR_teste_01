@@ -5,7 +5,7 @@ export function renderizarCatalogo() {
     for (const produtoCatalogo of catalogo){
     
         const cartaoProduto = `
-        <div class="border-solid w-52 m-2 flex flex-col p-2 justify-between shadow-xl shadow-slate-400 rounded-lg group" id="card-produto-${produtoCatalogo.id}">
+        <div class="border-solid w-52 m-2 flex flex-col p-2 justify-between shadow-xl shadow-slate-400 rounded-lg group ${produtoCatalogo.religioso ? 'religioso' : 'decoracao'}" id="card-produto-${produtoCatalogo.id}">
         <img src="./assets/img/${produtoCatalogo.imagem}" alt="Produto 1 do Recriar" class="group-hover:scale-110 duration-300 my-3 rounded-lg">
         <p class="text-sm">${produtoCatalogo.marca}</p>
         <p class="text-sm">${produtoCatalogo.nome}</p>
